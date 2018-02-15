@@ -8,7 +8,7 @@ Tick off the following steps as you go along (they don't have a strict order):
 
 - [ ] Ensure that all contributors have write access to the clone of the workshop repository and that it is hosted in the [Hackers at Cambridge GitHub organisation](https://github.com/hackersatcambridge). 
 - [ ] Fill in [metadata.yaml](/.hac_workshop/metadata.yaml)
-- [ ] Add an appropriate license that matches what is in [metadata.yaml](/.hac_workshop/metadata.yaml) [example](https://github.com/hackersatcambridge/workshop-intro-to-git/blob/master/LICENSE)
+- [ ] Add an appropriate license that matches what is in [metadata.yaml](/.hac_workshop/metadata.yaml): [Example](https://github.com/hackersatcambridge/workshop-intro-to-git/blob/master/LICENSE)
 - [ ] Fill in [description.md](/.hac_workshop/description.md)
 - [ ] Fill in [prerequisites.md](/.hac_workshop/prerequisites.md)
 - [ ] Fill in [presenter_guide.md](/.hac_workshop/presenter_guide.md) or delete it if it isn't needed
