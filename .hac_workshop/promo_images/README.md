@@ -13,3 +13,5 @@ The following file extensions are supported for `fg` images:
 - `.jpg`
 - `.png`
 - `.svg`
+
+Separating foreground and background images allows us to adjust features to different aspect ratios
