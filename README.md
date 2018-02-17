@@ -18,5 +18,6 @@ Tick off the following steps as you go along (they don't have a strict order):
 - [ ] Fill in [notes.md](/.hac_workshop/notes/notes.md)
 - [ ] Go to https://hackersatcambridge.com/workshops/validate/[[workshopId]] and ensure that validation passes. Fix any errors that occur
 - [ ] _Once validation has passed_, make a PR to add this repo to the [workshops index](https://github.com/hackersatcambridge/workshops)
+- [ ] Delete this file and replace it with a link to the website page of this workshop repo!
 
 *NOTE:* Anything you wish the attendees to be able to download should go in the top level directory of this repository
