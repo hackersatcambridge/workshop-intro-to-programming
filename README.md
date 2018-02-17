@@ -1,6 +1,8 @@
 This is a template for a Hackers at Cambridge workshop repository.
 To get started making a workshop, clone this repository to `workshop-[[workshopId]]` (e.g. `workshop-intro-to-rust`).
 
+The 'workshopId' is just a short identifier that represents your workshop. (e.g. `intro-to-rust`)
+
 After filling in the necessary information in this repository, and adding this workshop to the [workshops index](https://github.com/hackersatcambridge/workshops), it will be parsed by our website and shown on the workshops page at:
 [https://hackersatcambridge.com/workshops](https://hackersatcambridge.com/workshops)
 
