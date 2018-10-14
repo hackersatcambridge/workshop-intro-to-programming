@@ -3,11 +3,11 @@
 # For an example of all the available fields please refer to:
 # https://github.com/hackersatcambridge/workshop-example/blob/master/info/metadata.yaml
 
-title: # Workshop Title Goes Here
+title: Introduction to Programming with Python
 
 # People who have directly contributed content to this workhsop
 contributors:
-  # - Firstname Lastname
+   - Patrick Ferris
 
 # (optional, uncomment to use) - Non-contributors we would like to thank for helping to inspire, develop or facilitate this workshop
 # thanks:
@@ -28,8 +28,11 @@ contributors:
 # A set of keywords associated with the workshop
 # These are intended for use in searching
 tags:
-  # - tagname
+   - python
+   - beginner
+   - programming
+   - interview
 
 # A license code by which the workshop content is released
 # Should be an 'identifier' from here: https://spdx.org/licenses/
-license: # License-ID
+license: MIT
