@@ -11,8 +11,8 @@ def printMyName(x, name):
 printMyName(10, myName)
 
 def reverseString(name):
-    str = ""
+    string = ""
     for c in name:
-        str = c + str
-    print(str)
+        string = c + string
+    print(string)
 

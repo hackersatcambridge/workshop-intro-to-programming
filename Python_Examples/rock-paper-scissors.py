@@ -1,8 +1,6 @@
 # A rock-paper-scissors game
 import random
 
-print(random.randint(0, 2))
-
 class Computer:
     def __init__(self, name):
         self.name = name
@@ -25,9 +23,9 @@ computer = Computer("Master")
 while(current_round < rounds):
     user_input = input("Your move (r, p or s?): ")
     while(user_input not in ["r", "p", "s"]):
-        user_input = input("Please choice from (r, p or s): ")
+        user_input = input("Please choose from (r, p or s): ")
     computer_move = computer.makeMove()
-    print("Computer Move: " + computer_move)
+    print(computer.name + "'s Move: " + computer_move)
 
     if(user_input == computer_move):
         print("Draw! Replay the move!")

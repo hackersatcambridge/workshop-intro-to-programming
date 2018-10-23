@@ -166,3 +166,118 @@ student = Student("Rick", 60, "Wubba lubba dub dub!")
 student.speak()
 ```
 As you can see we tell python we're building a class with the `class` keyword, then the name of the class. By convention we start the name with an upper-case letter. Then we have to make a special `method` (a function related to the class) called `__init__`. Why all those underscores I here you ask? Python is a bit of "we're-going-to-make-it-object-oriented-or-die-trying" kind of a language. For more info, check [this](https://hackernoon.com/understanding-the-underscore-of-python-309d1a029edc) link. 
+
+Remember that duck from before. Well this is where hopefully things should start making some sense. In python we have vert lax rules about types and in fact very little type-checking. We have duck typing: *If it walks like duck, swims like duck and quacks like a duck. Then it probably is a [duck](https://devopedia.org/duck-typing).*
+
+More practically if the thing we're working with has the right method, then let's just used it! A bit weird, and can cause all sorts of headaches but great for writing quick and useful code. 
+
+## The Project: Rock, Paper, Scissors
+
+Now that we've learned so much. Let's make a game! Rock, paper, scissors is a classic and if you are unfamiliar check out the [link](https://en.wikipedia.org/wiki/Rock%E2%80%93paper%E2%80%93scissors). 
+
+What do we need to build this: 
+1. A Class of `Computer` this will make moves on the computers behalf using the imported module `random`
+2. A way of getting user input - for Python 3.* use `input`
+3. Some `if...elif...else` statements for checking who won
+4. Wrap it all up in a `while` loop to play for a predetermined number of rounds. 
+
+First let's build the computer:
+
+```python
+# A rock-paper-scissors game
+#Imports are like saying "I want somebody else's functions and classes so I can reuse them", python has a few standard ones"
+import random
+
+#The Computer Class
+class Computer:
+    #The special init method (constructor)
+    def __init__(self, name):
+        #Initialise the objects member variables
+        self.name = name
+        self.moves = ["r", "p", "s"]
+        self.move = ""
+    #A method for the computer to make a random move
+    def makeMove(self):
+        rn = random.randint(0, 2)
+        self.move = self.moves[rn]
+        return self.move
+```
+
+Now we want to initialise some global variables to keep track of scores, rounds etc.
+
+```python
+rounds = 3
+current_round = 0
+user_score = 0
+computer_score = 0
+
+#Initialise the computer
+computer = Computer("Master")
+```
+
+
+Okay, now we want to run the gameloop. This is fairly simple for us because we know the `current_round` and the number of `round`
+
+```python
+while(current_round < rounds):
+    #The Game Logic
+```
+
+We also want a way to get a user input so they can also make a move. Python let's us do that with the `input` function. 
+
+```python
+user_input = input("Your move (r, p or s?): ")
+```
+
+But what if they type "Wubba lubba dub dub!". Well we can check what they typed and just loop around until they get it right!
+
+```python
+while(user_input not in ["r", "p", "s"]):
+    user_input = input("Please choose from (r, p or s): ")
+```
+
+Next the computer can make its move and we can print that.
+
+```python
+computer_move = computer.makeMove()
+print(computer.name + "'s Move: " + computer_move)
+```
+
+And finally, the long-winded, but hopefully correct game logic for the different possible outcomes. Note how if they're equal we loop back to the beginning and don't increment any counters effectively replaying that point again.
+
+```python
+#The Game Logic
+if(user_input == computer_move):
+        print("Draw! Replay the move!")
+    elif(user_input == "r"):
+        if(computer_move == "p"):
+            print(":( the computer won that round!")
+            current_round = current_round + 1
+            computer_score = computer_score + 1
+        else:
+            print(":) You won that round!")
+            current_round = current_round + 1
+            computer_score = computer_score + 1
+    elif(user_input == "p"):
+        if(computer_move == "s"):
+            print(":( the computer won that round!")
+            current_round = current_round + 1
+            computer_score = computer_score + 1
+        else:
+            print(":) You won that round!")
+            current_round = current_round + 1
+            user_score = user_score + 1
+    else:
+        if(computer_move == "r"):
+            print(":( the computer won that round!")
+            current_round = current_round + 1
+            computer_score = computer_score + 1
+        else:
+            print(":) You won that round!")
+            current_round = current_round + 1
+            user_score = user_score + 1
+```
+
+And just like that we have ourselves a working game! 
+
+
