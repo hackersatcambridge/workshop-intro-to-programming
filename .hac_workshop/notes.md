@@ -42,6 +42,9 @@ totalLiquid = milk + water #200
 ```
 Here we have variables of the three most common *types* in python: strings ("..."), booleans (True, False) and integers (-100, 10 ...)
 
+![A Duck](markdown_images/duck.png)
+*More on the duck later*
+
 ### Conditional Statements
 Conditional statements are those which control the flow of our code, like branches on a tree. 
 
@@ -82,13 +85,84 @@ else:
 
 Notice how we added an extra conditional branch to our if statement. We could do this for however many branches we want, and could even nest these. 
 
+### Arrays
+Arrays are like lists of things - integers, strings etc. To create a new one in python there are two common approaches, the first is using square-brackets. 
+
+```python
+myList = [1, 2, 3, 4, 4, 5, 6, "dog"]
+```
+
+Not many languages support different types within the same list... and I don't condone the use of it. It's fine for certain things and also for hacking things together but sometimes things can happen which shouldn't. Imagine trying to sum an array that you thought was just integers...
+
+Accessing different elements in an array can be done by using square brackets and placing the number of the element you want in the brackets - **0 indexed!**
+
+```
+myList = [1, 2, 3, 4, 4, 5, 6]
+print(myList[1]) # 2
+print(myList[1:3]) # [2, 3]
+print(myList[-2:]) # [5, 6]
+```
+
 ### Loops
+
+Repeating things is quite a common practice in programming - updating the screen, summing over an array... and there are quite a few ways to achieve this.
+
+1. **The For-Loop**: A mighty tool in the developers arsenal, the for loop is probably the most common looping device there is. In python it's made even easier by it's high-level abstract syntax. 
+```python
+for i in range(10):
+    print(i) #0, 1, ... 9
+```
+
+Notice how we have used this `for` and `in` syntax. The `i` is our reference to the elements of the thing we are looping over (the *iterable*). Here we create a built-in python object (more about these soon) using the `range` constructor and supply it with an upper bound. 
+
 
 ### Functions
 
-### Classes
+By now it may seem that all this code is floating aimlessly in the middle of a document. What if we wanted to bundle together different statements into collections of statement that do something. Like a function. 
 
-This is the actual instructional workshop content.
-Do not put a title on this document, it will already have one on the website
-You can include images from the `images` folder like this:
-![Image Description](images/cat.png)
+Functions are exactly this - they're more like components or building blocks than mathematical functions. They can return something or they can be void (imagine all the function did was brint something).
+
+In python we can create a function using the `def` keyword. It takes a name, followed by the arguments wrapped up inside brackets. Again make sure you remember the semi-colon and propoer indentation. 
+
+```python
+#A function to join two strings with a gap - it return the string
+def joinName(first, second):
+    return first + " " + second
+
+#Set a variable to "Alice Smith"
+myName = joinName("Alice", "Smith")
+
+#A function which takes a number and a string name to print
+def printMyName(x, name):
+    for i in range(x):
+        print(name)
+
+printMyName(10, myName)
+```
+
+Some Exercises: 
+1. Write a function that takes an array as an argument and returns the sum of all the elements. What happens when you mix the types in the array? 
+2. Build a python function which takes a string and returns the string only reversed
+
+### Classes and Objects
+
+Okay. The mega-boss battle at the end of all of that python. Classes and objects. We'll take it easy and start with definitions and see how they apply after that. 
+
+1. Class - a way of writing some code which outlines the blueprints for building things (objects) which can be reused again and again.
+2. Objects - a specific instance of the blueprint. Imagine building a house, the plans for the house are the class and the actual houses you build are the objects.
+
+Okay great. So how does this work in python and why should we bother? Sometimes we might want to associate function and variables with a certain type of object and we might want multple versions of these. The classic example is the `Student` class which allows me to make lots of `Student()` objects.
+
+```python
+class Student:
+    def __init__(self, name, age, catchPhrase):
+        self.name = name
+        self.age = age
+        self.catchPhrase = catchPhrase
+    def speak(self):
+        print("Hi I am " + self.name + " and I am " + self.age + " years old, " + self.catchPhrase)
+
+student = Student("Rick", 60, "Wubba lubba dub dub!")
+student.speak()
+```
+As you can see we tell python we're building a class with the `class` keyword, then the name of the class. By convention we start the name with an upper-case letter. Then we have to make a special `method` (a function related to the class) called `__init__`. Why all those underscores I here you ask? Python is a bit of "we're-going-to-make-it-object-oriented-or-die-trying" kind of a language. For more info, check [this](https://hackernoon.com/understanding-the-underscore-of-python-309d1a029edc) link. 
