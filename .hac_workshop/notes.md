@@ -42,7 +42,7 @@ totalLiquid = milk + water #200
 ```
 Here we have variables of the three most common *types* in python: strings ("..."), booleans (True, False) and integers (-100, 10 ...)
 
-![A Duck](markdown_images/duck.png)
+![A Duck](markdown_images/duck.jpg)
 *More on the duck later*
 
 ### Conditional Statements
