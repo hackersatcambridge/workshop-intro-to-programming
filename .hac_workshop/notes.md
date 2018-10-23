@@ -280,4 +280,9 @@ if(user_input == computer_move):
 
 And just like that we have ourselves a working game! 
 
+### Extra Resources:
+- [Pip](https://pip.pypa.io/en/stable/): A tool for installing python packages - these will let you build more ambitious projects in less time because you don't have to keep reinventing the wheel. Packages exist for pretty much everything whether its machine learning (try Tensorflow or Pytorch) or web servers (Django or Flask). 
+- [PyGame](https://www.pygame.org/news): A free and open-source library for creating games in python.
+- [Hackerrank](https://www.hackerrank.com/): A place for you to try and write algorithms for solving different problems in any language you want (including python).  
+
 

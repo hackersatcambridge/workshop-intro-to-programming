@@ -1,5 +1,3 @@
-[[This is template content]]
-
 Depending on the Operating System (Windows, MacOS etc.) you're using, the installation of Python is different. As a reference [this](https://wiki.python.org/moin/BeginnersGuide/Download) webpage can help you get setup. For this workshop we'll be using Python 3.X and not Python 2.X (the much used, but legacy version of python). If you're ever following tutorials or projects in python be sure you're using the correct version, the change from 2 to 3 means things will not necessarily be compatible between the two. 
 
 ### Windows
