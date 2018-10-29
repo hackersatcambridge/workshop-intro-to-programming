@@ -1,4 +1,1 @@
-[[This is template content]]
-
-This file should describe what will be covered in the workshop and the motivation for why it is interesting or useful. 
-This will be used in publicity and on the website.
+Programming can be scary. Don't let that put you off, it can also be an awesome tool to build incredible things and express your creativity. This workshop will introduce you to the basics of the python programming language and programming fundamentals. By the end you'll even build your own rock-paper-scissors game.
