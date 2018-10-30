@@ -77,7 +77,7 @@ There is also the possibility to check for multiple conditions by placing the wo
 ```python
 if vegan and (eggs == 0 and milk == 0):
     print("Replace the milk with oatmilk and the eggs with bananas")
-else if eggs == 0 or milk == 0:
+elif eggs == 0 or milk == 0:
     print("You're not vegan, but you need to buy some milk and eggs")
 else:
     print("Carry on baking!")
